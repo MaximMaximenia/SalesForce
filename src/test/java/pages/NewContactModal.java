@@ -13,7 +13,7 @@ public class NewContactModal  {
     public NewContactModal(WebDriver driver) {
         this.driver = driver;
     }
-    @Step("ВВОД ДАННЫХ ДЛЯ ЗАПОЛНЕНИЯ КОНТАКТА")
+    @Step("ВВОД ДАННЫХ ДЛЯ ЗАПОЛНЕНИЯ КОНТАКТА.")
     public ContactsPage createContact(Contact contact) {
 
         new Input(driver, "First Name").write(contact.getFirstName());
