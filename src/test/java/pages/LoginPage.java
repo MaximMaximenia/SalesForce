@@ -1,6 +1,7 @@
 package pages;
 
 import elements.Password;
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -9,7 +10,7 @@ public class LoginPage extends BasePage {
     public LoginPage(WebDriver driver) {
         super(driver);
     }
-
+@Step ("ЗАЛОГИНИВАНИЕ")
     public HomePage login(String login) {
         Password pass = new Password();
         driver.get("https://login.salesforce.com/");
@@ -19,7 +20,7 @@ public class LoginPage extends BasePage {
 return new HomePage(driver);
 
     }
-
+@Step ("ОТКРЫТЬ СТРАНИЦУ")
     public LoginPage openPage() {
         driver.get("https://login.salesforce.com/");
         return this;
