@@ -2,6 +2,7 @@ package pages;
 import elements.Input;
 import elements.Select;
 import elements.TextArea;
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 public class NewAccountModal {
@@ -11,7 +12,7 @@ public class NewAccountModal {
     public NewAccountModal(WebDriver driver) {
         this.driver = driver;
     }
-
+    @Step("ВВОД ДАННЫХ ДЛЯ ЗАПОЛНЕНИЯ АККАУНТА")
     public AccountPage createAccount(String accountName) {
 
         new Input(driver, "Account Name").write(accountName);
